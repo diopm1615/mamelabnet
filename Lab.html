@@ -1,18 +1,80 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
+  <style>
+    /* Responsive gallery grid */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery-item {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .gallery-caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.4rem;
+    }
 
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+
+    /* Controls */
+    .lightbox .close, .lightbox .prev, .lightbox .next {
+      position: absolute;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.3s;
+    }
+    .lightbox .close { top: 20px; right: 30px; }
+    .lightbox .prev { left: 30px; top: 50%; transform: translateY(-50%); }
+    .lightbox .next { right: 30px; top: 50%; transform: translateY(-50%); }
+    .lightbox .prev:hover, .lightbox .next:hover, .lightbox .close:hover { color: #0ff; }
+  </style>
 </head>
 
 <body>
-
-
 
 <section style="font-family: 'Inter', Arial, sans-serif; color: #222; line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 2rem;">
   <header style="text-align: center; margin-bottom: 2rem;">
@@ -20,32 +82,93 @@
     <p style="font-size: 1.1rem; color: #555;">Comprehensive Overview</p>
   </header>
 
-    <nav class="navbar">
+  <nav class="navbar">
     <a href="index.html">Home</a>&nbsp;
     <a href="Resume.html">Resume</a>&nbsp;
     <a href="Lab.html">Lab</a>&nbsp;
     <a href="Contact.html">Contact</a>
   </nav>
-  
 
-     <section style="text-align: center; margin-top: 1rem;">
-      <img class="img1" src="hvacducts.webp" alt="hvac duct" style="width: 400px; height: 300px; border-radius: 8px;">
-    </section>
+  <section style="text-align: center; margin-top: 1rem;">
+    <img class="img1" src="hvacducts.webp" alt="HVAC Duct Installation" style="width: 400px; height: 300px; border-radius: 8px;">
+  </section>
 
-     <h3>Home Lab</h3>
+  <h2 style="margin-top: 2rem; color: #004080;">Installation of a 2-Ton Goodman Heat Pump Split System</h2>
 
+  <p>This project involved the complete installation of a <strong>2-ton Goodman heat pump split system</strong>, designed to deliver efficient heating and cooling for a residential space. The installation was performed with attention to detail, safety, and adherence to best HVAC practices to ensure long-term reliability and energy efficiency.</p>
 
+  <h3 style="color: #004080;">1. Ductwork Preparation</h3>
+  <p>The installation began with the setup of <strong>6 in. x 25 ft. Insulated Flexible Duct R6 Silver Jacket</strong>...</p>
 
-     
+  <h3 style="color: #004080;">7. System Testing and Commissioning</h3>
+  <p>After completing mechanical connections, a <strong>pressure test with nitrogen</strong> was performed, followed by a <strong>vacuum test</strong> down to <strong>300 microns</strong>. Once confirmed leak-free, the refrigerant was released into the system, completing the installation.</p>
 
-    <p><a class=homepara2 href="#top">back to top</a></p>
+  <h3 style="color: #004080; margin-top: 2.5rem;">📸 Project Gallery</h3>
+  <p style="color: #555;">Click an image to view full size.</p>
 
+  <!-- Responsive Image Gallery -->
+  <div class="gallery-container">
+    <div class="gallery-item"><img src="airhandler.jpg" alt="Air Handler Installation"></div>
+    <div class="gallery-item"><img src="Airhandlerreturn.jpg" alt="Air Handler Return"></div>
+    <div class="gallery-item"><img src="Airhandlersupplytrunk2.jpg" alt="Supply Trunk Install"></div>
+    <div class="gallery-item"><img src="AirhandlerSupplytrunk.jpg" alt="Air Handler Supply"></div>
+    <div class="gallery-item"><img src="hangingstrapsonflex.jpg" alt="Straps on Flex Duct"></div>
+    <div class="gallery-item"><img src="hangingstrapsonflex2.jpg" alt="Securing Ducts"></div>
+    <div class="gallery-item"><img src="RampforAirhandler.jpg" alt="Ramp Construction"></div>
+    <div class="gallery-item"><img src="returntrunkinsulation3.jpg" alt="Insulating Return Trunk"></div>
+    <div class="gallery-item"><img src="returntrunkinsulation4.jpg" alt="Return Trunk Insulation"></div>
+    <div class="gallery-item"><img src="Returntrunkinsulation2.jpg" alt="Return Duct Insulation"></div>
+    <div class="gallery-item"><img src="ReturntrunkInsulation.jpg" alt="Trunk Insulation"></div>
+    <div class="gallery-item"><img src="ventmounting.jpg" alt="Vent Mounting"></div>
+    <div class="gallery-item"><img src="ventmounting2.jpg" alt="Final Vent Mounting"></div>
+  </div>
+
+  <p style="margin-top: 2rem;"><a class="homepara2" href="#top">Back to top</a></p>
 </section>
-	
+
 <footer class="footerres" style="text-align: center; padding: 1rem 0; margin-top: 2rem; font-size: 0.9rem; color: #555;">
-    © 2025 Mame Website — All Rights Reserved
-  </footer>
-  
+  © 2025 Mame Website — All Rights Reserved
+</footer>
+
+<!-- Lightbox Script -->
+<div class="lightbox" id="lightbox">
+  <span class="close" id="closeBtn">&times;</span>
+  <span class="prev" id="prevBtn">&#10094;</span>
+  <span class="next" id="nextBtn">&#10095;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  const galleryItems = document.querySelectorAll('.gallery-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('closeBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  let currentIndex = 0;
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = item.src;
+      currentIndex = index;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+  nextBtn.addEventListener('click', () => changeImage(1));
+  prevBtn.addEventListener('click', () => changeImage(-1));
+
+  function changeImage(dir) {
+    currentIndex = (currentIndex + dir + galleryItems.length) % galleryItems.length;
+    lightboxImg.src = galleryItems[currentIndex].src;
+  }
+
+  // Close on background click
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) lightbox.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
-
