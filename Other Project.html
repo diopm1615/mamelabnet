@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+    /* Responsive gallery grid */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery-item {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .gallery-caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.4rem;
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+
+    /* Controls */
+    .lightbox .close, .lightbox .prev, .lightbox .next {
+      position: absolute;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.3s;
+    }
+    .lightbox .close { top: 20px; right: 30px; }
+    .lightbox .prev { left: 30px; top: 50%; transform: translateY(-50%); }
+    .lightbox .next { right: 30px; top: 50%; transform: translateY(-50%); }
+    .lightbox .prev:hover, .lightbox .next:hover, .lightbox .close:hover { color: #0ff; }
+  </style>
+</head>
+
+<body>
+
+<section style="font-family: 'Inter', Arial, sans-serif; color: #222; line-height: 1.7; max-width: 900px; margin: 0 auto; padding: 2rem;">
+  <header style="text-align: center; margin-bottom: 2rem;">
+    <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">Professional Experience & Skills</h1>
+    <p style="font-size: 1.1rem; color: #555;">Comprehensive Overview</p>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>&nbsp
+    <a href="Lab.html">Lab</a>&nbsp
+	<a href="Other Project.html">Other Project</a>&nbsp
+    <a href="Resume.html">Resume</a>&nbsp
+    <a href="Contact.html">Contact</a>
+  </nav>
+
+  <section style="text-align: center; margin-top: 1rem;">
+    <img class="img1" src="waterproofing/Crawlspace9.jpg" alt="French drain" style="width: 400px; height: 300px; border-radius: 8px;">
+  </section>
+
+  <h2 style="margin-top: 2rem; color: #004080;">Waterproofing my house</h2>
+
+  <p>This project is about waterproofing my house by building a <strong>French drain</strong> inside the crawlspace. As you can imagine it involves a lot of crawling and digging.</p>
+
+  <h3 style="color: #004080;">1. Taking out all the insulation</h3>
+  <p>The house has never been waterproofed, so the insulation was falling down./p>
+
+  <h3 style="color: #004080;">2. Digging trenches</h3>
+  <p>The hardest part of making a french drain is about the digging. I used a pic axe to soften the soil and then shovel and take the soil out.</p>
+
+  <h3 style="color: #004080;">3. Lay the non woven cloth</h3>
+  <p>After digging the trench around the inside perimeter of the crawlspace, I laid a non woven cloth that will help filter the water by blocking the sand from entering the drain pipe.</p>
+
+  <h3 style="color: #004080;">4. Add gravel, and Put the drain pipe.</h3>
+  <p>At this point I added gravel, installed the perforated 4 inch drain pipe inside the trench on top of the non woven cloth and gravel.</p>
+
+
+  <h3 style="color: #004080;">5. Dig the sump pump pit</h3>
+  <p>This step involve digging the sump pump pit, install the basin, the sump pump and set it up with the tubbing.<p> 
+
+ <h3 style="color: #004080;">6. Fold the cloth and add more gravel on top</h3>
+  <p>I folded the cloth and added more gravel on top. By the way, the purpose of the gravel is to further filter the water by blocking the sand and anything other than water.</p>
+
+
+  <h3 style="color: #004080;">7. At this point I need more gravel. I will update later!</h3>
+  
+
+  <h3 style="color: #004080; margin-top: 2.5rem;">📸 Project Gallery</h3>
+  <p style="color: #555;">Click an image to view full size.</p>
+
+  <!-- Responsive Image Gallery -->
+  <div class="gallery-container">
+    <div class="gallery-item"><img src="waterproofing/Crawlspace1.jpg" alt="waterproofing"></div>
+    <div class="gallery-item"><img src="waterproofing/Crawlspace2.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace3.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace4.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace5.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace6.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace7.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace8.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace9.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace10.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace11.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace12.jpg" alt="waterproofing"></div>
+	<div class="gallery-item"><img src="waterproofing/Crawlspace13.jpg" alt="waterproofing"></div>
+  </div>
+
+
+
+  <p style="margin-top: 2rem;"><a class="homepara2" href="#top">Back to top</a></p>
+</section>
+
+<footer class="footerres" style="text-align: center; padding: 1rem 0; margin-top: 2rem; font-size: 0.9rem; color: #555;">
+  © 2025 Mame Website — All Rights Reserved
+</footer>
+
+<!-- Lightbox Script -->
+<div class="lightbox" id="lightbox">
+  <span class="close" id="closeBtn">&times;</span>
+  <span class="prev" id="prevBtn">&#10094;</span>
+  <span class="next" id="nextBtn">&#10095;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  const galleryItems = document.querySelectorAll('.gallery-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('closeBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  let currentIndex = 0;
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = item.src;
+      currentIndex = index;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+  nextBtn.addEventListener('click', () => changeImage(1));
+  prevBtn.addEventListener('click', () => changeImage(-1));
+
+  function changeImage(dir) {
+    currentIndex = (currentIndex + dir + galleryItems.length) % galleryItems.length;
+    lightboxImg.src = galleryItems[currentIndex].src;
+  }
+
+  // Close on background click
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) lightbox.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
+
